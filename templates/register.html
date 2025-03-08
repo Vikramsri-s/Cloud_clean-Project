@@ -1,0 +1,408 @@
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>CloudClean</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../static/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../static/assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../static/assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../static/assets/vendors/select2/select2.min.css" />
+    <link rel="stylesheet" href="../static/assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css" />
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../static/assets/css/demo_2/style.css" />
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../static/assets/images/favicon.png" />
+
+<script language="javascript">
+function validate()
+{
+	if(document.form1.name.value=="")
+	{
+	alert("Enter the Name");
+	document.form1.name.focus();
+	return false;
+	}
+	if(document.form1.gender.selectedIndex==0)
+	{
+	alert("Select the Gender");
+	document.form1.gender.focus();
+	return false;
+	}
+	if(document.form1.dob.value=="")
+	{
+	alert("Enter the Date of Birth");
+	document.form1.dob.focus();
+	return false;
+	}
+	if(document.form1.location.value=="")
+	{
+	alert("Enter the Location");
+	document.form1.location.focus();
+	return false;
+	}
+	if(document.form1.mobile.value=="")
+	{
+	alert("Enter the Mobile No.");
+	document.form1.mobile.focus();
+	return false;
+	}
+	if(isNaN(document.form1.mobile.value))
+	{
+	alert("Invalid Mobile No.");
+	document.form1.mobile.select();
+	return false;
+	}
+	if(document.form1.mobile.value.length!=10)
+	{
+	alert("Mobile No. must be 10 digits!");
+	document.form1.mobile.select();
+	return false;
+	}
+	if(document.form1.email.value=="")
+	{
+	alert("Enter the Email");
+	document.form1.email.focus();
+	return false;
+	}
+	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.form1.email.value))  
+	{
+	
+	}
+	else
+	{
+	alert("Invalid E-mail!");
+	document.form1.email.select();
+	return false;
+	}
+	if(document.form1.uname.value=="")
+	{
+	alert("Enter the Username");
+	document.form1.uname.focus();
+	return false;
+	}
+	if(document.form1.pass.value=="")
+	{
+	alert("Enter the Password");
+	document.form1.pass.focus();
+	return false;
+	}
+	if(document.form1.cpass.value=="")
+	{
+	alert("Enter the Confirm Password");
+	document.form1.cpass.focus();
+	return false;
+	}
+	if(document.form1.pass.value!=document.form1.cpass.value)
+	{
+	alert("Password does not match!");
+	document.form1.cpass.select();
+	return false;
+	}
+return true;
+}
+</script>
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:../../partials/_horizontal-navbar.html -->
+      <div class="horizontal-menu">
+        <nav class="navbar top-navbar col-lg-12 col-12 p-0">
+          <div class="container">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+              <a class="navbar-brand brand-logo" href="../static/demo_2/index.html">
+                <img src="../static/assets/logo.png" alt="logo" />
+                <span class="font-12 d-block font-weight-light">CloudClean </span>
+              </a>
+              <a class="navbar-brand brand-logo-mini" href="../static/demo_2/index.html"><img src="../static/assets/images/logo-mini.svg" alt="logo" /></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+              <ul class="navbar-nav mr-lg-2">
+                <li class="nav-item nav-search d-none d-lg-block">
+                  <h2>CloudClean</h2>
+                  <!--<div class="input-group">
+                    <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                      <span class="input-group-text" id="search">
+                        <i class="mdi mdi-magnify"></i>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control" id="navbar-search-input" placeholder="Search" aria-label="search" aria-describedby="search" />
+                  </div>-->
+                </li>
+              </ul>
+              <!--<ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item nav-profile dropdown">
+                  <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                    <div class="nav-profile-img">
+                      <img src="../static/assets/images/faces/face1.jpg" alt="image" />
+                    </div>
+                    <div class="nav-profile-text">
+                      <p class="text-black font-weight-semibold m-0"> Olson jass </p>
+                      <span class="font-13 online-color">online <i class="mdi mdi-chevron-down"></i></span>
+                    </div>
+                  </a>
+                  <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#">
+                      <i class="mdi mdi-cached mr-2 text-success"></i> Activity Log </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+                      <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a>
+                  </div>
+                </li>
+              </ul>-->
+              <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+                <span class="mdi mdi-menu"></span>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <nav class="bottom-navbar">
+          <div class="container">
+            <ul class="nav page-navigation">
+              <li class="nav-item">
+                <a class="nav-link" href="/">
+                  <i class="mdi mdi-compass-outline menu-icon"></i>
+                  <span class="menu-title">Home</span>                </a>              </li>
+              <!--<li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="mdi mdi-monitor-dashboard menu-icon"></i>
+                  <span class="menu-title">UI Elements</span>
+                  <i class="menu-arrow"></i>                </a>
+                <div class="submenu">
+                  <ul class="submenu-item">
+                    <li class="nav-item">
+                      <a class="nav-link" href="../static/demo_2/pages/ui-features/buttons.html">Buttons</a>                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../static/demo_2/pages/ui-features/dropdowns.html">Dropdown</a>                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../static/demo_2/pages/ui-features/typography.html">Typography</a>                    </li>
+                  </ul>
+                </div>
+              </li>-->
+			  <li class="nav-item">
+                <a class="nav-link" href="/login">
+                  <i class="mdi mdi-contacts menu-icon"></i>
+                  <span class="menu-title">Data Owner</span>                </a>              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login_user">
+                  <i class="mdi mdi-clipboard-text menu-icon"></i>
+                  <span class="menu-title">Data User</span>                </a>              </li>
+              
+             <!-- <li class="nav-item">
+                <a class="nav-link" href="../static/demo_2/pages/charts/chartjs.html">
+                  <i class="mdi mdi-chart-bar menu-icon"></i>
+                  <span class="menu-title">Charts</span>                </a>              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../static/demo_2/pages/tables/basic-table.html">
+                  <i class="mdi mdi-table-large menu-icon"></i>
+                  <span class="menu-title">Tables</span>                </a>              </li>
+              <li class="nav-item">
+                <a href="https://www.bootstrapdash.com/demo/plus-free/documentation/documentation.html" class="nav-link" target="_blank">
+                  <i class="mdi mdi-file-document-box menu-icon"></i>
+                  <span class="menu-title">Docs</span></a>              </li>-->
+              <!--<li class="nav-item">
+                <div class="nav-link d-flex">
+                  <button class="btn btn-sm bg-danger text-white"> Trailing </button>
+                  <div class="nav-item dropdown">
+                    <a class="nav-link count-indicator dropdown-toggle text-white font-weight-semibold" id="notificationDropdown" href="#" data-toggle="dropdown"> English </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                      <a class="dropdown-item" href="#">
+                        <i class="flag-icon flag-icon-bl mr-3"></i> French </a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">
+                        <i class="flag-icon flag-icon-cn mr-3"></i> Chinese </a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">
+                        <i class="flag-icon flag-icon-de mr-3"></i> German </a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">
+                        <i class="flag-icon flag-icon-ru mr-3"></i>Russian </a>                    </div>
+                  </div>
+                  <a class="text-white" href="../static/demo_2/index.html"><i class="mdi mdi-home-circle"></i></a>                </div>
+              </li>-->
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title">Data Owner Registration</h3>
+              <nav aria-label="breadcrumb">
+                <!--<ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                  <li class="breadcrumb-item active" aria-current="page"> Form elements </li>
+                </ol>-->
+              </nav>
+            </div>
+            <div class="row">
+             {% if msg=="success" %}
+			  <h4 style="color:#009933">Registering...</h4>
+			   <iframe src="http://iotcloud.co.in/testmail/testmail1.php?message={{mess}}&email={{email}}&subject=Register Info" width="10" height="10" frameborder="1"></iframe>
+			  
+				<script>
+//Using setTimeout to execute a function after 5 seconds.
+setTimeout(function () {
+   //Redirect with JavaScript
+   window.location.href= '/reg?uid={{uid}}';
+}, 4000);
+</script>
+				{% endif %}
+              {% if msg=="fail" %}
+			  <span style="color:#FF0000">Already Exist!</span>
+			  {% endif %}
+              <div class="col-12 grid-margin">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title"></h4>
+                    <form name="form1" method="post" class="form-sample">
+                      <p class="card-description">Personal info</p>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Name</label>
+                            <div class="col-sm-9">
+                              <input type="text" name="name" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Gender</label>
+                            <div class="col-sm-9">
+                              <select name="gender" class="form-control">
+							  <option value="">-Gender-</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+						<div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Data of Birth</label>
+                            <div class="col-sm-9">
+                              <input type="date" class="form-control" name="dob" placeholder="dd/mm/yyyy" />
+                            </div>
+                          </div>
+                          
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Location</label>
+                            <div class="col-sm-9">
+                              <input class="form-control" name="location" placeholder="Location" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Mobile No.</label>
+                            <div class="col-sm-9">
+                              <input type="text" name="mobile" maxlength="10" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+						 <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                              <input type="text" name="email" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+					  <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Username</label>
+                            <div class="col-sm-9">
+                              <input type="text" name="uname" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+						 <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Password</label>
+                            <div class="col-sm-9">
+                              <input type="password" name="pass" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Confirm Password</label>
+                            <div class="col-sm-9">
+                              <input type="password" name="cpass" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-9">
+                              <button type="submit" class="btn btn-primary mb-2 mb-md-0 mr-2" onClick="return validate()"> Register </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            
+             
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer">
+            <div class="container">
+              <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">CloudClean</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">  <a href="https://www.bootstrapdash.com/" target="_blank"></a> </span>
+              </div>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../static/assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../static/assets/vendors/select2/select2.min.js"></script>
+    <script src="../static/assets/vendors/typeahead.js/typeahead.bundle.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../static/assets/js/off-canvas.js"></script>
+    <script src="../static/assets/js/hoverable-collapse.js"></script>
+    <script src="../static/assets/js/misc.js"></script>
+    <script src="../static/assets/js/settings.js"></script>
+    <script src="../static/assets/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="../static/assets/js/file-upload.js"></script>
+    <script src="../static/assets/js/typeahead.js"></script>
+    <script src="../static/assets/js/select2.js"></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>

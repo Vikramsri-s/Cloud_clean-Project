@@ -1,0 +1,3 @@
+#!c:\users\vikram s\downloads\new folder\cloud_clean\venv\scripts\python.exe
+from numba.pycc import main
+main()

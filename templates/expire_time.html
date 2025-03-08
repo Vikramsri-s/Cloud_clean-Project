@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+{% if st=="1" %}
+
+<iframe src="http://iotcloud.co.in/testmail/testmail1.php?message={{mess1}}&email={{email}}&subject=File Time Expired" width="10" height="10" frameborder="0"></iframe>
+
+<iframe src="http://iotcloud.co.in/testsms/sms.php?sms=emr&name={{name}}&mess={{mess}}&mobile={{mobile}}" width="10" height="10" ></iframe>
+
+{% endif %}
+
+<script>
+//Using setTimeout to execute a function after 5 seconds.
+setTimeout(function () {
+   //Redirect with JavaScript
+   window.location.href= '/expire_time';
+}, 8000);
+</script>
+
+
+</body>
+</html>

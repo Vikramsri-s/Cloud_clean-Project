@@ -1,0 +1,5 @@
+from urllib.request import urlopen
+import webbrowser
+
+url="http://iotcloud.co.in/testmail/email1.php?email="+email+"&message="+message
+webbrowser.open_new(url)
